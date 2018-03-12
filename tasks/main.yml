@@ -35,13 +35,6 @@
     - packages
 
 - block:
-  - apt_repository: 
-      repo: "deb http://download.opensuse.org/repositories/home:/evilissimo:/deb/Debian_7.0/ ./"
-      state: present
-  - apt_key: 
-      id: 73A1A299 
-      url: http://download.opensuse.org/repositories/home:/evilissimo:/deb/Debian_7.0/Release.key 
-      state: present
   - name: install Ovirt Guest Agent
     apt:
       name: "{{ item }}"
